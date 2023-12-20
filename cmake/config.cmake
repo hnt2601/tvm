@@ -46,7 +46,7 @@
 # - ON: enable CUDA with cmake's auto search
 # - OFF: disable CUDA
 # - /path/to/cuda: use specific path to cuda toolkit
-set(USE_CUDA OFF)
+set(USE_CUDA ON)
 
 # Whether to enable NCCL support:
 # - ON: enable NCCL with cmake's auto search
@@ -154,7 +154,7 @@ set(USE_MICRO_STANDALONE_RUNTIME OFF)
 # - OFF: disable llvm, note this will disable CPU codegen
 #        which is needed for most cases
 # - /path/to/llvm-config: enable specific LLVM when multiple llvm-dev is available.
-set(USE_LLVM OFF)
+set(USE_LLVM ON)
 
 # Whether use MLIR to help analyze, requires USE_LLVM is enabled
 # Possible values: ON/OFF
@@ -403,7 +403,7 @@ set(BACKTRACE_ON_SEGFAULT OFF)
 # - ON: enable PAPI support. Will search PKG_CONFIG_PATH for a papi.pc
 # - OFF: disable PAPI support.
 # - /path/to/folder/containing/: Path to folder containing papi.pc.
-set(USE_PAPI OFF)
+set(USE_PAPI /root/papi-install/lib/pkgconfig/)
 
 # Whether to use GoogleTest for C++ unit tests. When enabled, the generated
 # build file (e.g. Makefile) will have a target "cpptest".
@@ -419,7 +419,7 @@ set(USE_GTEST AUTO)
 
 # Enable using CUTLASS as a BYOC backend
 # Need to have USE_CUDA=ON
-set(USE_CUTLASS OFF)
+set(USE_CUTLASS ON)
 
 # Enable to show a summary of TVM options
 set(SUMMARIZE OFF)
